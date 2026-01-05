@@ -58,9 +58,6 @@ if st.button("Calculate Real Cost"):
         # 2. Extract distance and time
         if result['rows'][0]['elements'][0]['status'] == 'OK':
 
-
-            # Note: You use the same API key here
-            # The corrected URL for the Directions mode of the Embed API
             map_url = f"https://www.google.com/maps/embed/v1/directions?key={st.secrets['GOOGLE_MAPS_KEY']}&origin={start_point.replace(' ', '+')}&destination={destination.replace(' ', '+')}&mode=driving"
 
             # Use HTML to display it
